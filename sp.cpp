@@ -1017,6 +1017,38 @@ int process_msg3 (MsgIO *msgio, IAS_Connection *ias, sgx_ra_msg1_t *msg1,
 				eprintf("SHA256(MK) = %s\n", hexstring(hashmk, 32));
 				eprintf("SHA256(SK) = %s\n", hexstring(hashsk, 32));
 			}
+	
+		/*
+		 * hskim
+		 * Below code is for encryption of the message 
+		 * (keyword and search counter, secret key, etc.).
+		 */
+
+		unsigned char *iv = (unsigned char *)"0123456789012345";
+		unsigned char *plaintext = (unsigned char *)"Keywords";
+
+		/*
+		 * hskim
+    	 * Buffer for ciphertext. Ensure the buffer is long enough for the
+    	 * ciphertext which may be longer than the plaintext, depending on the
+    	 * algorithm and mode.
+    	 */
+    	unsigned char ciphertext[128];
+
+		/* hskim, Buffer for the decrypted text */
+		unsigned char decryptedtext[128];
+
+		int decryptedtext_len, ciphertext_len;
+
+		/* hskim, Encrypt the plaintext */
+		ciphertext_len = AES_encrypt (plaintext, strlen ((char *)plaintext), session->kdk, iv,
+                              ciphertext);
+
+		/*
+		 * hskim
+		 * This is endline of the encryptin the message.
+		 */
+
 		}
 
 	} else {

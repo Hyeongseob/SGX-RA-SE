@@ -36,6 +36,10 @@ void crypto_destroy();
 
 void crypto_perror (const char *prefix);
 
+/* hskim, AES */
+int AES_encrypt(unsigned char *plaintext, int plaintext_len, unsigned char *key,
+            unsigned char *iv, unsigned char *ciphertext);
+
 /*  AES-CMAC */
 
 int cmac128(unsigned char key[16], unsigned char *message, size_t mlen,
