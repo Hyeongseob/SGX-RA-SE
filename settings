@@ -87,5 +87,5 @@ VERBOSE=1
 
 # Set to non-zero for debugging output
 
-DEBUG=0
+DEBUG=1
 
