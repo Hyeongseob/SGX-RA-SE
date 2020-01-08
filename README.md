@@ -12,6 +12,7 @@
 * [Running (Advanced)](#running-adv)
 * [Sample Output](#output)
 
+
 ## <a name="intro"></a>Introduction
 
 This code sample demonstrates the procedures that must be followed when performing Remote Attestation for an Intel SGX enclave. The code sample includes both a sample ISV (independent software vendor) client (and its enclave) and ISV remote attestation server. This code sample has been tested on the following platforms:
@@ -31,6 +32,9 @@ For more information on developing applications with Intel SGX, visit the [Intel
 ## <a name="new"></a>What's New
 
 See the [full release history](CHANGES.md).
+
+### v3.1
+Hyeongseob kim, adjusted the codes for searchable encryption.
 
 ### v3.0
 
