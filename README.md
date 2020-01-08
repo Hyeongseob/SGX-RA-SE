@@ -31,6 +31,10 @@ For more information on developing applications with Intel SGX, visit the [Intel
 
 See the [full release history](CHANGES.md).
 
+### v3.1
+
+This is adjusted by Hyeongseob Kim. Seachable encryption with SGX. 
+
 ### v3.0
 
 Release on 7/2/2019.
