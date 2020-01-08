@@ -1244,6 +1244,11 @@ int process_msg01 (MsgIO *msgio, IAS_Connection *ias, sgx_ra_msg1_t *msg1,
 	return 1;
 }
 
+/*
+ * hskim
+ * This function is also important to follow the kdk.
+ */
+
 int derive_kdk(EVP_PKEY *Gb, unsigned char kdk[16], sgx_ec256_public_t g_a,
 	config_t *config)
 {
@@ -1259,11 +1264,21 @@ int derive_kdk(EVP_PKEY *Gb, unsigned char kdk[16], sgx_ec256_public_t g_a,
 	 * public/private key.
 	 */
 
+	/*
+	 * hskim
+	 * The function 'key_from_sgx_ec256' is described in 'crypto.c' file
+	 */
+
 	Ga= key_from_sgx_ec256(&g_a);
 	if ( Ga == NULL ) {
 		crypto_perror("key_from_sgx_ec256");
 		return 0;
 	}
+
+	/*
+	 * hskim
+	 * The function 'key_shared_secret' is also described in 'crypto.c' file
+	 */
 
 	/* The shared secret in a DH exchange is the x-coordinate of Gab */
 	Gab_x= key_shared_secret(Gb, Ga, &slen);
@@ -1285,6 +1300,11 @@ int derive_kdk(EVP_PKEY *Gb, unsigned char kdk[16], sgx_ec256_public_t g_a,
 
 	/*
 	 * KDK = AES_CMAC(0x00000000000000000000000000000000, secret)
+	 */
+
+	/*
+	 * hskim
+	 * The function 'cmac128' is also described in 'crypto.c' file
 	 */
 
 	cmac128(cmackey, Gab_x, slen, kdk);
