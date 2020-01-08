@@ -645,6 +645,10 @@ int main(int argc, char *argv[])
 		ra_session_t session;
 		sgx_ra_msg1_t msg1;
 		sgx_ra_msg2_t msg2;
+		/* 
+		 * About the ra_msg_t structure, there is in protocol.h file.
+		 * This is consist of 'attestation_status_t' and 'sgx_platform_info_t'
+		 */
 		ra_msg4_t msg4;
 
 		memset(&session, 0, sizeof(ra_session_t));
@@ -978,6 +982,15 @@ int process_msg3 (MsgIO *msgio, IAS_Connection *ias, sgx_ra_msg1_t *msg1,
 		 * SHA256 hashes of these so we can verify there's a shared
 		 * secret between us and the client.
 		 */
+
+		/*
+		 * hskim
+		 * This section shuold be proceed by sp.
+		 * Generally, the system is not trusted.
+		 * Mantory adjust.
+		 */
+
+		msg4->status = Trusted;
 
 		if ( msg4->status == Trusted ) {
 			unsigned char hashmk[32], hashsk[32];

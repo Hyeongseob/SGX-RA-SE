@@ -45,6 +45,7 @@ typedef enum {
 typedef struct _ra_msg4_struct {
 	attestation_status_t status;
 	sgx_platform_info_t platformInfoBlob;
+	string plaintext;
 } ra_msg4_t;
 
 #endif

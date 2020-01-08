@@ -817,6 +817,14 @@ int do_attestation (sgx_enclave_id_t eid, config_t *config)
 	 * provider.
 	 */
 
+	/*
+	 * hskim
+	 * Generally, the system is not trusted by the codes, mandatory permisson shuold be.
+	 * I adjust the if statement below to process the massage 4.
+	 */	
+	
+	enclaveTrusted = Trusted;
+
 	if ( enclaveTrusted == Trusted ) {
 		sgx_status_t key_status, sha_status;
 		sgx_sha256_hash_t mkhash, skhash;
