@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Intel&reg; Software Guard Extensions (SGX) Remote Attestation End-to-End Sample
 
 * [Introduction](#intro)
@@ -11,7 +10,6 @@
 * [Running (Quick-start)](#running-quick)
 * [Running (Advanced)](#running-adv)
 * [Sample Output](#output)
-
 
 ## <a name="intro"></a>Introduction
 
@@ -32,9 +30,6 @@ For more information on developing applications with Intel SGX, visit the [Intel
 ## <a name="new"></a>What's New
 
 See the [full release history](CHANGES.md).
-
-### v3.1
-Hyeongseob kim, adjusted the codes for searchable encryption.
 
 ### v3.0
 
@@ -475,6 +470,3 @@ Waiting for msg3
 010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 ----------------------------------------------------------------------------
 ```
-=======
-# sgx-ra-sample
->>>>>>> aedf0f5edcee039f684a2e6b4af0a59006b62d3e
