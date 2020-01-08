@@ -72,6 +72,11 @@ static const unsigned char def_service_private_key[32] = {
 	0xad, 0x57, 0x34, 0x53, 0xd1, 0x03, 0x8c, 0x01
 };
 
+/*
+ * hskim
+ * We will focuse on the 'ra_sesstion_struct' and 'kdk[16]'
+ */
+
 typedef struct ra_session_struct {
 	unsigned char g_a[64];
 	unsigned char g_b[64];
@@ -987,7 +992,7 @@ int process_msg3 (MsgIO *msgio, IAS_Connection *ias, sgx_ra_msg1_t *msg1,
 		 * hskim
 		 * This section shuold be proceed by sp.
 		 * Generally, the system is not trusted.
-		 * Mantory adjust.
+		 * Mandatory adjust.
 		 */
 
 		msg4->status = Trusted;
