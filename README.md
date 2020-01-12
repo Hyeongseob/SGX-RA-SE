@@ -11,6 +11,10 @@
 * [Running (Advanced)](#running-adv)
 * [Sample Output](#output)
 
+## hskim
+
+This repository is made by Hyeongseob Kim. This code sample is based on 'sgx-ra-sample' code of Intel co.. Hskim adjusted the codes for making the secure channel and transit the secret information such as the keyword and private keys. It is not complited. Moreover, Hskim tried to comment the codes for easier interpret. How to run is the described the below. 
+
 ## <a name="intro"></a>Introduction
 
 This code sample demonstrates the procedures that must be followed when performing Remote Attestation for an Intel SGX enclave. The code sample includes both a sample ISV (independent software vendor) client (and its enclave) and ISV remote attestation server. This code sample has been tested on the following platforms:
