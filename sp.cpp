@@ -1024,6 +1024,9 @@ int process_msg3 (MsgIO *msgio, IAS_Connection *ias, sgx_ra_msg1_t *msg1,
 		 * (keyword and search counter, secret key, etc.).
 		 */
 
+
+		printf("\n[hskim] Try to encrypt the keyword with kdk\n");
+
 		unsigned char *iv = (unsigned char *)"0123456789012345";
 		unsigned char *plaintext = (unsigned char *)"Keywords";
 
@@ -1033,6 +1036,7 @@ int process_msg3 (MsgIO *msgio, IAS_Connection *ias, sgx_ra_msg1_t *msg1,
     	 * ciphertext which may be longer than the plaintext, depending on the
     	 * algorithm and mode.
     	 */
+
     	unsigned char ciphertext[128];
 
 		/* hskim, Buffer for the decrypted text */
@@ -1043,6 +1047,9 @@ int process_msg3 (MsgIO *msgio, IAS_Connection *ias, sgx_ra_msg1_t *msg1,
 		/* hskim, Encrypt the plaintext */
 		ciphertext_len = AES_encrypt (plaintext, strlen ((char *)plaintext), session->kdk, iv,
                               ciphertext);
+		
+		if(ciphertext_len>0)
+			printf("[hskim] Encrypted the keyword with kdk\n\n");	
 
 		/*
 		 * hskim

@@ -564,10 +564,13 @@ int AES_encrypt(unsigned char *plaintext, int plaintext_len, unsigned char *key,
 		goto cleanup;
 	ciphertext_len += len;
 
-	printf("\n[hskim] Encrypt the keyword\n");	
+	printf("[hskim] Encrypt the keyword\n");	
 
 	/* Clean up */
 	EVP_CIPHER_CTX_free(ctx);
+
+
+	return ciphertext_len;
 
 cleanup:
 	if ( ctx != NULL ) EVP_MD_CTX_destroy(ctx);
