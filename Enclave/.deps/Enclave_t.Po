@@ -1,0 +1,90 @@
+Enclave_t.o: Enclave_t.c Enclave_t.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/tlibc/stdint.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/tlibc/sys/stdint.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/tlibc/sys/cdefs.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/tlibc/sys/_types.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/tlibc/wchar.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/tlibc/stddef.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_edger8r.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_defs.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_error.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_eid.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_trts.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_utils.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_attributes.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_key.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_report.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_tkey_exchange.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_key_exchange.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_quote.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_ecp_types.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_tcrypto.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/tlibc/stdlib.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_tae_service.h \
+ ../config.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_lfence.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/tlibc/errno.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/tlibc/mbusafecrt.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/tlibc/string.h \
+ /home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/tlibc/stdarg.h
+
+Enclave_t.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/tlibc/stdint.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/tlibc/sys/stdint.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/tlibc/sys/cdefs.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/tlibc/sys/_types.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/tlibc/wchar.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/tlibc/stddef.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_edger8r.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_defs.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_error.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_eid.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_trts.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_utils.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_attributes.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_key.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_report.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_tkey_exchange.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_key_exchange.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_quote.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_ecp_types.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_tcrypto.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/tlibc/stdlib.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_tae_service.h:
+
+../config.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/sgx_lfence.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/tlibc/errno.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/tlibc/mbusafecrt.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/tlibc/string.h:
+
+/home/hskim/linux-sgx/linux/installer/bin/sgxsdk/include/tlibc/stdarg.h:
