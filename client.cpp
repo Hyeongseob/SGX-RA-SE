@@ -741,6 +741,12 @@ int do_attestation (sgx_enclave_id_t eid, config_t *config)
 
 	edividerWithText("Enclave Trust Status from Service Provider");
 
+
+	/*
+	 * hskim, in here, with status of msg3 contents, 
+	 * they decide that the enclave is trusted or not.
+	 */
+
 	enclaveTrusted= msg4->status;
 	if ( enclaveTrusted == Trusted ) {
 		eprintf("Enclave TRUSTED\n");
