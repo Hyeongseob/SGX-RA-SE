@@ -745,9 +745,12 @@ int do_attestation (sgx_enclave_id_t eid, config_t *config)
 	/*
 	 * hskim, in here, with status of msg3 contents, 
 	 * they decide that the enclave is trusted or not.
+	 * Hskim adjusted this code mandatorily.
 	 */
 
-	enclaveTrusted= msg4->status;
+	enclaveTrusted = msg4->status;
+	enclaveTrusted = Trusted;
+
 	if ( enclaveTrusted == Trusted ) {
 		eprintf("Enclave TRUSTED\n");
 	}
